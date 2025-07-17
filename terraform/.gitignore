@@ -1,0 +1,5 @@
+config.sh
+.DS_Store
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl

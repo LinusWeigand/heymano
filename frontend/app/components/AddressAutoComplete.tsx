@@ -140,6 +140,64 @@ export default function ReliableAddressAutocomplete({
   }, []);
 
   useEffect(() => {
+    if (variant !== "search") return;
+
+    let containerObserver: MutationObserver | null = null;
+    let bodyObserver: MutationObserver | null = null;
+
+    const reposition = () => {
+      const input = inputRef.current;
+      if (!input) return;
+      const anchor = input.closest(".location-field-container") as HTMLElement | null;
+      if (!anchor) return;
+      const pacContainer = document.querySelector(".pac-container") as HTMLElement | null;
+      if (!pacContainer) return;
+
+      const rect = anchor.getBoundingClientRect();
+      const desiredLeft = `${rect.left + window.scrollX}px`;
+      if (pacContainer.style.left !== desiredLeft) {
+        pacContainer.style.left = desiredLeft;
+      }
+    };
+
+    const attachToContainer = (pacContainer: HTMLElement) => {
+      if (containerObserver) return;
+      reposition();
+      containerObserver = new MutationObserver(reposition);
+      containerObserver.observe(pacContainer, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+    };
+
+    const existing = document.querySelector(".pac-container") as HTMLElement | null;
+    if (existing) {
+      attachToContainer(existing);
+    } else {
+      bodyObserver = new MutationObserver(() => {
+        const pacContainer = document.querySelector(".pac-container") as HTMLElement | null;
+        if (pacContainer) {
+          attachToContainer(pacContainer);
+          bodyObserver?.disconnect();
+          bodyObserver = null;
+        }
+      });
+      bodyObserver.observe(document.body, { childList: true });
+    }
+
+    const handleWindowChange = () => reposition();
+    window.addEventListener("resize", handleWindowChange);
+    window.addEventListener("scroll", handleWindowChange, true);
+
+    return () => {
+      containerObserver?.disconnect();
+      bodyObserver?.disconnect();
+      window.removeEventListener("resize", handleWindowChange);
+      window.removeEventListener("scroll", handleWindowChange, true);
+    };
+  }, [variant]);
+
+  useEffect(() => {
     const styleEl = document.createElement("style");
     styleEl.textContent = `
     .pac-container {
@@ -150,12 +208,9 @@ export default function ReliableAddressAutocomplete({
         background: white;
         font-family: inherit;
         z-index: 99999 !important; /* ensure it's on top of everything */
-        
-        /* Responsive width */
         width: 500px !important;
         min-width: 400px !important;
-        left: 0 !important;
-        
+
         /* Mobile styles */
         @media (max-width: 768px) {
           width: 100vw !important;
@@ -235,7 +290,7 @@ export default function ReliableAddressAutocomplete({
     );
 
   return (
-    <div className={cn("flex flex-col ml-8", className)}>
+    <div className={cn("flex flex-col", variant === "profile" && "ml-8", className)}>
       {label && (
         <label htmlFor={id} className="text-base font-medium">
           {label}

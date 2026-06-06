@@ -23,7 +23,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mano",
+  title: "Heymano",
   description: "Leicht Handwerker finden.",
 };
 

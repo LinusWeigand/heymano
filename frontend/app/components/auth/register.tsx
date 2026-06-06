@@ -215,7 +215,7 @@ export default function Register({ to_start, on_close, email }: RegisterProps) {
         )}
 
         <p className="text-sm text-gray-600 my-4">
-          Indem ich Zustimmen und weiter wähle, erkläre ich mich mit den Nutzungsbedingungen von Mano einverstanden und erkenne die Datenschutzbestimmungen an.
+          Indem ich Zustimmen und weiter wähle, erkläre ich mich mit den Nutzungsbedingungen von Heymano einverstanden und erkenne die Datenschutzbestimmungen an.
         </p>
 
 

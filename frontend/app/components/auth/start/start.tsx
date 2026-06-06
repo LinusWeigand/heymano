@@ -73,7 +73,7 @@ const Start = ({ on_close, to_login, to_register }: StartProps) => {
         <p>Einloggen oder registrieren</p>
       </div>
       <div className="flex flex-col items-strech mt-[25px] mx-6 mb-[15px]">
-        <p className="text-[25px] font-medium mb-5">Willkommen bei Mano</p>
+        <p className="text-[25px] font-medium mb-5">Willkommen bei Heymano</p>
 
         <label
           htmlFor="UserEmail"

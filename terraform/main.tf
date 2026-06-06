@@ -4,13 +4,13 @@ provider "google" {
 }
 
 resource "google_cloud_run_service" "app" {
-  name     = "fullstack-app"
+  name     = "heymano"
   location = var.region
 
   template {
     metadata {
       annotations = {
-        "autoscaling.knative.dev/minScale"      = "2"
+        "autoscaling.knative.dev/minScale"      = "1"
         "autoscaling.knative.dev/maxScale"      = "10"
         "run.googleapis.com/cloudsql-instances" = var.database_instance_connection_name
       }
@@ -18,7 +18,7 @@ resource "google_cloud_run_service" "app" {
 
     spec {
       containers {
-        image = "europe-west3-docker.pkg.dev/${var.project_id}/my-repo/fullstack-app:v5"
+        image = "europe-west3-docker.pkg.dev/${var.project_id}/my-repo/heymano:v3"
 
         env {
           name  = "DATABASE_URL"

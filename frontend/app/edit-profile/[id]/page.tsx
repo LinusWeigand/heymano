@@ -1249,7 +1249,7 @@ export default function EditProfilePage({ params }: { params: { id: string } }) 
 
                     <div className="space-y-2">
                       <Label htmlFor="handwerks_karten_nummer" className="text-base font-medium">
-                        Handwerks-Karten-Nummer <span className="text-red-500 ml-1">*</span>
+                        Betriebs-Nummer <span className="text-red-500 ml-1">*</span>
                       </Label>
                       <div className="relative">
                         <Hash className="absolute left-3 top-3.5 h-5 w-5 text-muted-foreground" />
@@ -1257,7 +1257,7 @@ export default function EditProfilePage({ params }: { params: { id: string } }) 
                           id="handwerks_karten_nummer"
                           name="handwerks_karten_nummer"
                           maxLength={100}
-                          placeholder="Geben Sie Ihre Handwerks-Karten-Nummer an"
+                          placeholder="Geben Sie Ihre Betriebs-Nummer an"
                           value={formData.handwerks_karten_nummer}
                           onChange={handleChange}
                           className={`text-[16px] rounded-md bg-white border-2 focus:outline-none h-12 pl-12 ${handwerksKartenNummerError

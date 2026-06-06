@@ -1,6 +1,4 @@
-use image::{
-    codecs::jpeg::JpegEncoder, imageops::FilterType, ImageReader, GenericImageView,
-};
+use image::{codecs::jpeg::JpegEncoder, imageops::FilterType, GenericImageView, ImageReader};
 use sqlx::Row;
 use std::sync::Arc;
 use std::{collections::HashMap, io::Cursor};
@@ -822,7 +820,7 @@ pub async fn get_photos_of_profile(
                 eprintln!("get_photos_of_profile error (retrying): {:?}", e);
                 retries -= 1;
                 tokio::time::sleep(delay).await;
-                delay *= 2; 
+                delay *= 2;
             }
             Err(e) => {
                 eprintln!("get_photos_of_profile error: {:?}", e);

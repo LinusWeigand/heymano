@@ -113,7 +113,7 @@ impl EmailManager {
                 <div class="email-container">
                   <!-- Header with Logo -->
                   <div class="header">
-                    Mano
+                    Heymano
                   </div>
 
                   <!-- Email Content -->
@@ -125,7 +125,7 @@ impl EmailManager {
                     <!-- Reset Button -->
                     <a href="{reset_link}" class="reset-button">Passwort zurücksetzen</a>
 
-                    <p>Danke,<br>Das Mano Team</p>
+                    <p>Danke,<br>Das Heymano Team</p>
                   </div>
                 </div>
               </body>
@@ -228,7 +228,7 @@ impl EmailManager {
                 <div class="email-container">
                   <!-- Header with Logo -->
                   <div class="header">
-                    Mano
+                    Heymano
                   </div>
 
                   <!-- Email Content -->
@@ -240,7 +240,7 @@ impl EmailManager {
                     <!-- Reset Button -->
                     <a href="{reset_link}" class="reset-button">E-Mail verifizieren</a>
 
-                    <p>Danke,<br>Das Mano Team</p>
+                    <p>Danke,<br>Das Heymano Team</p>
                   </div>
                 </div>
               </body>

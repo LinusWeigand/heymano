@@ -152,7 +152,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="font-medium text-sm md:text-base">E-Mail</h3>
-                <p className="text-muted-foreground text-sm md:text-base">kontakt@heymano.com</p>
+                <p className="text-muted-foreground text-sm md:text-base">Matteo.levi.golisano@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3 md:gap-4">
@@ -160,8 +160,8 @@ export default function AboutPage() {
                 <MapPin className="h-4 w-4 md:h-5 md:w-5 text-primary" />
               </div>
               <div>
-                <h3 className="font-medium text-sm md:text-base">Standort</h3>
-                <p className="text-muted-foreground text-sm md:text-base">München, Deutschland</p>
+                <h3 className="font-medium text-sm md:text-base">Adresse</h3>
+                <p className="text-muted-foreground text-sm md:text-base">Belgradstraße 6, 80796 München</p>
               </div>
             </div>
           </div>

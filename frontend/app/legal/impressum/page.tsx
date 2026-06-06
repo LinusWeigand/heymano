@@ -13,14 +13,14 @@ export default function Impressum() {
         </p>
         <p className="mb-4">
           <strong>Verantwortlich für den Inhalt:</strong><br />
-          Linus Weigand<br />
-          Elilandstr. 16<br />
-          81547 München<br />
+          Matteo Golisano<br />
+          Belgradstraße 6<br />
+          80796 München<br />
           Deutschland
         </p>
         <p className="mb-4">
           <strong>Kontakt:</strong><br />
-          E-Mail: kontakt@heymano.com
+          E-Mail: Matteo.levi.golisano@gmail.com
         </p>
         <p className="mb-4">
           <strong>Verwendete Ressourcen:</strong><br />

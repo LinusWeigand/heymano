@@ -19,8 +19,8 @@ export default function Datenschutz() {
         <h2 className="text-xl font-semibold mt-6 mb-2">2. Verantwortliche Stelle</h2>
         <p className="mb-4">
           Verantwortlich für die Datenverarbeitung ist:<br />
-          Linus Weigand<br />
-          kontakt@heymano.com
+          Matteo Golisano<br />
+          Matteo.levi.golisano@gmail.com
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">3. Handwerker-Profile</h2>

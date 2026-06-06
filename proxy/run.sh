@@ -1,1 +1,1 @@
-./cloud-sql-proxy axiomatic-spark-463119-v2:europe-west1:postgres
+./cloud-sql-proxy $TF_VAR_project_id:europe-west1:postgres

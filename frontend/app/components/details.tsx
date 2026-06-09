@@ -247,9 +247,8 @@ export default function Details({
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />
                   <div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-primary transform transition-transform duration-200 ${
-                      index === currentPhotoIndex ? "scale-x-100" : "scale-x-0"
-                    }`}
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-primary transform transition-transform duration-200 ${index === currentPhotoIndex ? "scale-x-100" : "scale-x-0"
+                      }`}
                     style={{ marginBottom: "-4px" }}
                   />
                 </button>
@@ -260,7 +259,7 @@ export default function Details({
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               {website && (
                 <a
-                  href={`https://${website}`}
+                  href={`${website}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline flex items-center"
@@ -463,9 +462,8 @@ export default function Details({
                       className="w-full h-full object-cover transition-transform group-hover:scale-110"
                     />
                     <div
-                      className={`absolute bottom-0 left-0 right-0 h-1 bg-primary transform transition-transform duration-200 ${
-                        index === currentPhotoIndex ? "scale-x-100" : "scale-x-0"
-                      }`}
+                      className={`absolute bottom-0 left-0 right-0 h-1 bg-primary transform transition-transform duration-200 ${index === currentPhotoIndex ? "scale-x-100" : "scale-x-0"
+                        }`}
                       style={{ marginBottom: "-4px" }}
                     />
                   </button>
@@ -476,7 +474,7 @@ export default function Details({
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 {website && (
                   <a
-                    href={`https://${website}`}
+                    href={`${website}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline flex items-center"

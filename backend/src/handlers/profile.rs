@@ -264,7 +264,11 @@ pub async fn create_profile(
     let lat = lat.unwrap_or_default();
     let lng = lng.unwrap_or_default();
     let website = website.unwrap_or_default();
-    let instagram = instagram.unwrap_or_default();
+    let instagram = instagram
+        .unwrap_or_default()
+        .trim()
+        .trim_start_matches('@')
+        .to_string();
     let skills = skills.unwrap_or_default();
     let bio = bio.unwrap_or_default();
     let handwerks_karten_nummer = handwerks_karten_nummer.unwrap_or_default();
@@ -1057,6 +1061,7 @@ pub async fn update_profile(
         query_builder.push(", website = ").push_bind(website);
     }
     if let Some(instagram) = instagram {
+        let instagram = instagram.trim().trim_start_matches('@').to_string();
         query_builder.push(", instagram = ").push_bind(instagram);
     }
     if let Some(bio) = bio {

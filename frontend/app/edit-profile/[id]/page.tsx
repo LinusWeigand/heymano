@@ -405,7 +405,7 @@ export default function EditProfilePage({ params }: { params: { id: string } }) 
     if (!formData) return false
 
     if (!formData.handwerks_karten_nummer) {
-      setHandwerksKartenNummerError("Bitte geben Sie eine Handelsregisternummer an.")
+      setHandwerksKartenNummerError("Bitte geben Sie eine Betriebs-Nummer an.")
       isValid = false
     }
 
@@ -1290,7 +1290,7 @@ export default function EditProfilePage({ params }: { params: { id: string } }) 
                       <p>{formData.bio || "-"}</p>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-muted-foreground">Handwerks-Karten-Nummer</p>
+                      <p className="text-sm font-medium text-muted-foreground">Betriebs-Nummer</p>
                       <p>{formData.handwerks_karten_nummer}</p>
                     </div>
                   </div>

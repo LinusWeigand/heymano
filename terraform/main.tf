@@ -18,7 +18,7 @@ resource "google_cloud_run_service" "app" {
 
     spec {
       containers {
-        image = "europe-west3-docker.pkg.dev/${var.project_id}/my-repo/heymano:v3"
+        image = "europe-west3-docker.pkg.dev/${var.project_id}/my-repo/heymano:v8"
 
         env {
           name  = "DATABASE_URL"

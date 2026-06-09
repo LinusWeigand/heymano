@@ -35,7 +35,7 @@ export default function Datenschutz() {
           Profilfotos werden auf unserem Server gespeichert und öffentlich im Profil angezeigt.
         </p>
         <p className="mb-4">
-          Handwerkskarten-Nummern werden zur Verifizierung gespeichert und nicht öffentlich angezeigt.
+          Betriebs-Nummern werden zur Verifizierung gespeichert und nicht öffentlich angezeigt.
         </p>
 
         <h3 className="text-lg font-semibold mt-4 mb-2">3.2 Datenfreigabe</h3>

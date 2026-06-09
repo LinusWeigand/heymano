@@ -227,7 +227,7 @@ export default function ProfileForm({ initialData, isEditing = false }: ProfileF
       field_count += 1
     }
     if (handwerksKartenNummerError) {
-      fields.push("Handwerks-Karten-Nummer")
+      fields.push("Betriebs-Nummer")
       field_count += 1
     }
     if (skillsError) {
@@ -500,7 +500,7 @@ export default function ProfileForm({ initialData, isEditing = false }: ProfileF
     let isValid = true
 
     if (!formData.handwerks_karten_nummer) {
-      setHandwerksKartenNummerError("Bitte geben Sie eine Handelsregisternummer an.")
+      setHandwerksKartenNummerError("Bitte geben Sie eine Betriebs-Nummer an.")
       isValid = false
     }
 
@@ -1163,7 +1163,7 @@ export default function ProfileForm({ initialData, isEditing = false }: ProfileF
 
               <div className="space-y-3 pt-2">
                 <Label htmlFor="handwerks_karten_nummer" className="text-base font-medium">
-                  Handwerks-Karten-Nummer<span className="text-red-500 ml-1">*</span>
+                  Betriebs-Nummer<span className="text-red-500 ml-1">*</span>
                 </Label>
                 <div className="relative">
                   <Hash className="absolute left-3 top-3.5 h-5 w-5 text-muted-foreground" />
@@ -1171,12 +1171,12 @@ export default function ProfileForm({ initialData, isEditing = false }: ProfileF
                     id="handwerks_karten_nummer"
                     name="handwerks_karten_nummer"
                     maxLength={100}
-                    placeholder="Geben Sie Ihre Handwerks-Karten-Nummer an"
+                    placeholder="Geben Sie Ihre Betriebs-Nummer an"
                     value={formData.handwerks_karten_nummer}
                     onChange={handleChange}
                     className={`text-[16px] rounded-md bg-white border-2 focus:outline-none h-12 pl-12 ${handwerksKartenNummerError
-                        ? "border-red-300 focus-visible:ring-red-300"
-                        : "focus-visible:border-primary"
+                      ? "border-red-300 focus-visible:ring-red-300"
+                      : "focus-visible:border-primary"
                       }`}
                   />
                   {handwerksKartenNummerError && (

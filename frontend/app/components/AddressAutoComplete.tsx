@@ -290,7 +290,7 @@ export default function ReliableAddressAutocomplete({
     );
 
   return (
-    <div className={cn("flex flex-col", variant === "profile" && "ml-8", className)}>
+    <div className={cn("flex flex-col", className)}>
       {label && (
         <label htmlFor={id} className="text-base font-medium">
           {label}
